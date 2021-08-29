@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.xkuyax</groupId>
+    <artifactId>DatabaseFramework</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>jar</packaging>
+
+    <properties>
+        <java.version>16</java.version>
+
+        <!-- compiling -->
+        <maven.compiler.source>${java.version}</maven.compiler.source>
+        <maven.compiler.target>${java.version}</maven.compiler.target>
+        <maven.compiler.testSource>${java.version}</maven.compiler.testSource>
+        <maven.compiler.testTarget>${java.version}</maven.compiler.testTarget>
+
+        <!-- encoding -->
+        <utf.encoding>UTF-8</utf.encoding>
+        <project.build.sourceEncoding>${utf.encoding}</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>${utf.encoding}</project.reporting.outputEncoding>
+
+        <!-- dependencies -->
+        <lombok.version>1.18.20</lombok.version>
+        <annotations.version>22.0.0</annotations.version>
+        <hikari.version>5.0.0</hikari.version>
+        <commons-dbutils.version>1.7</commons-dbutils.version>
+        <mysql-connector.version>8.0.25</mysql-connector.version>
+        <guava.version>30.1.1-jre</guava.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <artifactId>lombok</artifactId>
+            <groupId>org.projectlombok</groupId>
+            <scope>provided</scope>
+            <version>${lombok.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>${annotations.version}</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
+            <version>${mysql-connector.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>${hikari.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>commons-dbutils</groupId>
+            <artifactId>commons-dbutils</artifactId>
+            <version>${commons-dbutils.version}</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.google.guava</groupId>
+            <artifactId>guava</artifactId>
+            <version>${guava.version}</version>
+        </dependency>
+    </dependencies>
+
+</project>
